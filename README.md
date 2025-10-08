@@ -5,13 +5,9 @@
   </a>
 </p>
 
-# Betsson Movies List Application
+# Movies List Application
 
 Short excercise to display redux, filtering, testing, angular material, angular/media-query animations, theming, and styling. I wanted it to have a fast paced feel, with a layered menu system with only one movement between details and main page.
-
-## See it in action
-
-[Movie Nights Application](https://chilliano.github.io/movie-night/)
 
 ## Tech
 
@@ -31,11 +27,6 @@ Short excercise to display redux, filtering, testing, angular material, angular/
 2. Clone this repo to your machine
 3. npm i
 4. npm run start.
-
-## Deployment Steps
-
-- edit the package json to include your repo from github
-- npm run build (adding prod flag to significantly reduce bundle sizes)
 
 ## Application Steps
 
