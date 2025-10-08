@@ -1,0 +1,53 @@
+<div class="genres">
+  <div class="current-filters" *ngIf="(chosenGenres$ | async).length">
+    <button
+      [color]="'primary'"
+      mat-raised-button
+      #tooltip="matTooltip"
+      [matTooltip]="chosenGenres$ | async"
+      matTooltipClass="custom-tooltip"
+      aria-label="Button that displays a tooltip that hides when scrolled out of the container"
+    >
+      Filters Active
+    </button>
+  </div>
+
+  <div class="filter">
+    <app-button
+      [config]="{
+        text: 'Genre',
+        icon: 'filter_list',
+        backgroundColor: color.$secondary,
+        disabled: getRouteUrl() !== '/movies'
+      }"
+      (clicked)="toggleList()"
+    ></app-button>
+  </div>
+
+  <div class="list" [ngClass]="{ hide: !displayList }">
+    <div class="buttons">
+      <app-button
+        (clicked)="onFilterByGenre(genresList.selectedOptions.selected)"
+        [config]="{
+          text: 'Filter By Genre',
+          color: 'white'
+        }"
+      ></app-button>
+      <app-button
+        (clicked)="genresList.deselectAll(); onFilterByGenre([])"
+        [config]="{ text: 'Reset', color: 'white' }"
+      ></app-button>
+    </div>
+    <div class="list-container">
+      <mat-selection-list #genresList>
+        <mat-list-option
+          *ngFor="let genre of genres"
+          [value]="genre"
+          [selected]="(chosenGenres$ | async).indexOf(genre) > -1"
+        >
+          {{ genre }}
+        </mat-list-option>
+      </mat-selection-list>
+    </div>
+  </div>
+</div>

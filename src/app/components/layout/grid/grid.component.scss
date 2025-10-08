@@ -1,0 +1,11 @@
+@import "src/assets/styles/variables";
+:host {
+  .mat-grid-tile {
+    transition: $general-transition;
+    // opacity: 0.6;
+    &:hover {
+      // box-shadow: $box-shadow-hover;
+      // opacity: 1;
+    }
+  }
+}

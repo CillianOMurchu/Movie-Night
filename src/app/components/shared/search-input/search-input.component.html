@@ -1,0 +1,15 @@
+<div class="container--search-input">
+  <form class="filter" appearance="outline">
+    <mat-form-field>
+      <mat-label>Filter Movies</mat-label>
+      <input
+        (keyup)="updateFilterTerm($event)"
+        matInput
+        autofocus
+        placeholder="Search..."
+        [value]="filterTerm$ | async"
+      />
+      <mat-icon matPrefix>search</mat-icon>
+    </mat-form-field>
+  </form>
+</div>

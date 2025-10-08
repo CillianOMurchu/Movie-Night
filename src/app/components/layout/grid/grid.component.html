@@ -1,0 +1,15 @@
+<mat-grid-list
+  [cols]="breakpoint"
+  (window:resize)="onResize($event)"
+  rowHeight="22rem"
+  gutterSize="10"
+  [@cardAnimation]="data.length"
+>
+  <mat-grid-tile
+    *ngFor="
+      let item of data | filterOnFilterTerm: localFilterTermRef;
+      index as i
+    "
+  >
+    <app-grid-item [item]="item"></app-grid-item></mat-grid-tile
+></mat-grid-list>

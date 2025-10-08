@@ -1,0 +1,32 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "es2020",
+    "lib": ["es2018", "dom"],
+    "baseUrl": "src",
+    "paths": {
+      "@store/*": ["app/modules/core/store/*"],
+      "@assets/*": ["assets/*"],
+      "@models/*": ["app/models/*"],
+      "@actions/*": ["app/modules/core/store/actions/*"],
+      "@images/*": ["assets/images/*"],
+      "@styles/*": ["assets/styles/*"],
+      "@variables/*": ["assets/variables/*"],
+      "@components/*": ["app/components/*"],
+      "@services/*": ["app/services/*"],
+      "@functions/*": ["app/functions/*"],
+      "@animations/*": ["app/animations/*"],
+      "@directives/*": ["app/directives/*"],
+      "@pipes/*": ["app/pipes/*"]
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@import "src/assets/styles/variables";
+
+.base-container {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+
+  #content {
+    height: 100%;
+    overflow: auto;
+    padding: 1rem;
+  }
+}

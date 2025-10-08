@@ -1,0 +1,23 @@
+<button
+  *ngIf="!config?.icon; else iconButton"
+  mat-button
+  [disabled]="config.disabled"
+  [ngStyle]="{ backgroundColor: config?.backgroundColor, color: config?.color }"
+  (click)="this.onClick(true)"
+>
+  {{ config?.text || "Button" }}
+</button>
+
+<ng-template #iconButton>
+  <button
+    (click)="this.onClick(true)"
+    [ngStyle]="{
+      backgroundColor: config?.backgroundColor,
+      color: config?.color
+    }"
+    mat-icon-button
+    [disabled]="config.disabled"
+  >
+    <mat-icon>{{ config?.icon }}</mat-icon>
+  </button>
+</ng-template>

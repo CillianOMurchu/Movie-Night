@@ -1,0 +1,24 @@
+<div class="search-container">
+  <app-search-input></app-search-input>
+  <app-button
+    *ngIf="(filterTerm$ | async).length"
+    (clicked)="hideList = !hideList"
+    [config]="{ text: hideList ? 'Un-hide list' : 'Hide list', color: 'white' }"
+  >
+  </app-button>
+  <app-list
+    [config]="{
+      data: movies$ | async,
+      hide: !(filterTerm$ | async).length || hideList,
+      filterTerm: filterTerm$ | async
+    }"
+    (clicked)="onListItemSelect($event)"
+  ></app-list>
+</div>
+
+<div class="movies--container">
+  <app-grid
+    [data]="movies$ | async"
+    [localFilterTermRef]="filterTerm$ | async"
+  ></app-grid>
+</div>

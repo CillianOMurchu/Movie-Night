@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <div class="thick-top"></div>
+  <span class="home-icon">
+    <app-button
+      (clicked)="goHome()"
+      [config]="{
+        text: 'test',
+        icon: 'home',
+        backgroundColor: color.$secondary,
+        disabled: getRouteUrl() === '/movies'
+      }"
+    ></app-button>
+  </span>
+  <span>Movie Night</span>
+  <span class="example-spacer">
+    <app-genres></app-genres>
+  </span>
+</mat-toolbar>
