@@ -1,66 +1,48 @@
 <p align="center">
   <a href="https://chilliano.github.io/movie-night/">
-    <img src="./src/assets/images/README/Movie-Night-Mobile.png"
-         alt="movie Night Cover Image">
+    <img src="./src/assets/images/README/Movie-Night-Mobile.png" alt="Movie Night Cover Image">
   </a>
 </p>
 
 # Movies List Application
 
-Short excercise to display redux, filtering, testing, angular material, angular/media-query animations, theming, and styling. I wanted it to have a fast paced feel, with a layered menu system with only one movement between details and main page.
+A quick exercise showcasing Angular features including Redux (@ngrx/store), filtering, testing, Angular Material, media query animations, theming, and styling. The UI delivers a fast-paced layered menu with smooth navigation between details and the main page.
 
-## Tech
+## Technologies
 
-<b>Built with</b>
-
-- [Angular2+](https://angular.io/)
+- [Angular](https://angular.io/)
 - [Redux](https://redux.js.org/)
+- [Angular Material](https://material.angular.io/)
+- [Lazysizes Image Lazy Loader](https://github.com/aFarkas/lazysizes)
 
 ## Installation
 
-1. Make Sure you have NPM, NODE, and ANGULAR-CLI installed on your machine
+1. Ensure you have Node.js, npm, and Angular CLI installed:
+   - [Node.js](https://nodejs.org/en/download/)
+   - [npm](https://docs.npmjs.com/cli/install)
+   - [Angular CLI](https://angular.io/cli)
+2. Clone this repository
+3. Run `npm install` to install dependencies
+4. Run `npm run start` to launch the app
 
-- [npm](https://docs.npmjs.com/cli/install)
-- [Angular2+](https://angular.io/)
-- [Node](https://nodejs.org/en/download/)
+## Features
 
-2. Clone this repo to your machine
-3. npm i
-4. npm run start.
+- Redux store setup with @ngrx/store and debugging with @ngrx/store-devtools
+- Responsive design with Angular Material components for a mobile-friendly experience
+- Optimized image loading using lazysizes for fast, jank-free visuals
 
-## Application Steps
+## Future Enhancements
 
-- First I built the redux store - @ngrx/store + @ngrx/store-devtools
-- I added Material as a quick style choice that follows best practices and looks and feels well for mobile use @angular/material
-- For image rendering speed in lists i added @lazysizes. ('a fast (jank-free), SEO-friendly and self-initializing lazyloader for images' ["Lazysizes" Github](https://github.com/afarkas/lazysizes))
+- Movie details page with ratings, reviews, and stylized visuals
+- Movie favoriting with confirmation snackbars integrated with Redux
+- Improved filtering UX including sticky genre filter and dynamic layout adjustments
 
-## Ideas
+## Known Issues
 
-- Movie Details Page
+- Filter-by-genre button not sticky at top
+- Absolute import path configuration pending
+- Extract filter and movie details components for modularity
+- Indicate filter match context (title, description) to users
+- Reset search term on homepage navigation
+- Proper usage of genre enums
 
-  - Rating
-  - Rotten Tomato Percentage
-  - some phrases maybe from reviewers scrolling like tokyo style
-  - image jagged and digital like a tokyo skyscraper
-
-- Favouriting specific movies, need snackbar to confirm add and remove. need to add to redux
-  ```
-  <button
-    mat-icon-button
-    class="example-icon favorite-icon"
-    aria-label="Example icon-button with heart icon"
-  >
-    <mat-icon>favorite</mat-icon>
-  </button>
-  ```
-
-## Missing
-
-- put filter-by-genre-button to stick at top of the list
-- absolute style imports
-- change movies per column during filter if it drops below 5
-- extract the input filter from the movies component
-- extract everything from movie-details component
-- indicate which area filter term was found - Description, title etc... and display to user
-- reset search term on home nav?
-- use genres enum correctly
