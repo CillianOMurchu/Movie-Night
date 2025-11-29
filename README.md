@@ -18,12 +18,26 @@ A quick exercise showcasing Angular features including Redux (@ngrx/store), filt
 ## Installation
 
 1. Ensure you have Node.js, npm, and Angular CLI installed:
-   - [Node.js](https://nodejs.org/en/download/)
-   - [npm](https://docs.npmjs.com/cli/install)
-   - [Angular CLI](https://angular.io/cli)
+  - [Node.js](https://nodejs.org/en/download/)
+  - [npm](https://docs.npmjs.com/cli/install)
+  - [Angular CLI](https://angular.io/cli)
+
 2. Clone this repository
-3. Run `npm install` to install dependencies
-4. Run `npm run start` to launch the app
+
+3. Set your Node version to 10 using nvm: 
+  ```sh
+  nvm use 10
+  ```
+
+4. Install dependencies with legacy peer support:
+  ```sh
+  npm install --legacy-peer-deps
+  ```
+
+5. Run the app:
+  ```sh
+  npm run start
+  ```
 
 ## Features
 
